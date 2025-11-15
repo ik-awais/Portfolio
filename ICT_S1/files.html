@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Files</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="files-container">
+
+        <!-- Left Panel: File List -->
+        <section class="left-panel">
+            <h2>Your Documents</h2>
+            <p class="sub">Static preview only. No backend connected.</p>
+
+            <div class="file-list">
+                <div class="file-card">
+                    <h3>Project Brief.pdf</h3>
+                    <p>1.2 MB · PDF</p>
+                </div>
+
+                <div class="file-card">
+                    <h3>Team Roster.xlsx</h3>
+                    <p>342 KB · XLSX</p>
+                </div>
+
+                <div class="file-card">
+                    <h3>Sprint Notes.md</h3>
+                    <p>9 KB · MD</p>
+                </div>
+
+                <div class="file-card">
+                    <h3>Design Mockup.png</h3>
+                    <p>3.4 MB · PNG</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel: Upload Area -->
+        <section class="right-panel">
+            <h2>Upload Files</h2>
+            <p class="sub">Frontend-only demo. Files are not actually uploaded.</p>
+
+            <div class="upload-box">
+                <label for="fileInput" class="upload-label">
+                    <strong>Click to choose files</strong>
+                    <span>or drag & drop (visual only)</span>
+                </label>
+                <input type="file" id="fileInput" multiple />
+            </div>
+        </section>
+
+    </div>
+
+     <!-- Contact Section -->
+    <footer class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, feel free to reach out!</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </footer>
+
+</body>
+</html>

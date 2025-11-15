@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+/* Login Page Styles */
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: none;
+    flex-direction: column;
+}
+
+form.active {
+    display: flex;
+}
+
+input {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px;
+    margin-top: 10px;
+    background: #4a6cf7;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3954d4;
+}
+
+.switch {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #555;
+}
+
+.switch span {
+    color: #4a6cf7;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Files Dashboard Styles */
+.files-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-panel, .right-panel {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.left-panel {
+    flex: 2;
+    overflow-y: auto;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.file-card {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.file-card:hover {
+    background: #f8f9fa;
+    border-color: #4a6cf7;
+}
+
+.file-card h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.file-card p {
+    font-size: 13px;
+    color: #777;
+}
+
+.upload-box {
+    flex: 1;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.upload-box:hover {
+    border-color: #4a6cf7;
+    background: #f8f9fa;
+}
+
+.upload-label {
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #555;
+}
+
+.upload-label strong {
+    color: #4a6cf7;
+    font-size: 16px;
+}
+
+.upload-label span {
+    font-size: 13px;
+    color: #888;
+}
+
+#fileInput {
+    display: none;
+}
+
+/* ---------------------- CONTACT SECTION ---------------------- */
+.contact-section {
+    width: 100%;
+    background: white;
+    border-top: 1px solid #e0e0e0;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.05);
+}
+
+.contact-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 768px) {
+    .files-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h2 id="form-title">Login</h2>
+
+            <!-- Login Form -->
+            <form id="login-form" class="active">
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit">Login</button>
+                <p class="switch">No account yet? <span onclick="showSignup()">Sign Up</span></p>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form">
+                <input type="text" placeholder="Full Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit">Sign Up</button>
+                <p class="switch">Already have an account? <span onclick="showLogin()">Login</span></p>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Switch between Login and Sign Up forms
+        function showSignup() {
+            document.getElementById("form-title").innerText = "Sign Up"
+            document.getElementById("login-form").classList.remove("active")
+            document.getElementById("signup-form").classList.add("active")
+        }
+
+        function showLogin() {
+            document.getElementById("form-title").innerText = "Login"
+            document.getElementById("signup-form").classList.remove("active")
+            document.getElementById("login-form").classList.add("active")
+        }
+
+        // Redirect to files.html upon successful submission
+        document.getElementById("login-form").addEventListener("submit", function(e) {
+            e.preventDefault()
+            window.location.href = "files.html"
+        })
+
+        document.getElementById("signup-form").addEventListener("submit", function(e) {
+            e.preventDefault()
+            window.location.href = "files.html"
+        })
+    </script>
+
+</body>
+</html>
